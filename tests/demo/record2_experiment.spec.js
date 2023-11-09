@@ -7,11 +7,8 @@ test('record demo 2', async () => {
   });
   const context = await browser.newContext();
   const page = await context.newPage();
-  await page.goto('https://www.google.com/search?q=youtube&oq=youtube&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCDI0ODVqMGoyqAIAsAIA&sourceid=chrome&ie=UTF-8');
-  await page.goto('https://www.youtube.com/?hl=RU');
-  await page.goto('https://www.youtube.com/');
-  await page.locator('ytd-thumbnail').filter({ hasText: '11:54:57 Текущее видео' }).locator('#thumbnail').click();
-  await page.getByLabel('Оформить подписку на канал "Guitar Instrumental"').click();
+  await page.goto('https://www.google.com/search?q=github&oq=github+&gs_lcrp=EgZjaHJvbWUyBggAEEUYOdIBCTEyMDM2ajBqMqgCALACAA&sourceid=chrome&ie=UTF-8');
+  await page.getByRole('link', { name: 'GitHub: Let\'s build from here · GitHub GitHub https://github.com' }).click();
   await page.close();
 
   // ---------------------
