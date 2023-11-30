@@ -52,3 +52,17 @@ const people = [
   */
 
   
+
+  // 2. Реализовать методы, которые в процессе выполнения строки (2).plus(3).minus(1) дали бы на выходе 4.
+
+  Number.prototype.plus = function (value) {
+    return this + value;
+  };
+
+  Number.prototype.minus = function (value) {
+    return this - value;
+  };
+
+  
+// Число два будет доступно через this в функции plus. Из нее мы возвращаем результат сложения числа, на которое указывает this и числа, 
+// переданного в качестве аргумента. Аналогично для minus.
