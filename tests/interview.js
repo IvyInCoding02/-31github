@@ -18,13 +18,13 @@ let result = arr.filter((item, index) => {
 console.log(result); //[1, 2, 3, 4, 5]
 
 
-// let string = "madam";
-// string = string.toLowerCase();
-// let reversedString = string.split("").reverse().join("");
-// console.log(reversedString); 
-// if (string === reversedString) {
-//   console.log(`${string} is palindrome`);
-// } else {
-//   console.log(`${string} is NOT palindrome`);
-// }
+let string = "madam";
+string = string.toLowerCase();
+let reversedString = string.split("").reverse().join("");
+console.log(reversedString); 
+if (string === reversedString) {
+  console.log(`${string} is palindrome`);
+} else {
+  console.log(`${string} is NOT palindrome`);
+}
 
