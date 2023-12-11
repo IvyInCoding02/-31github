@@ -15,3 +15,14 @@
 
 //CLUE 
 // .split() .join();
+
+function panic(str){
+    return str
+    .split(' ')
+    .join(' 😨 ')
+    .toUpperCase();
+}
+
+console.log(panic("Hello"));
+console.log(panic("I am almost out of coffee"));
+console.log(panic("See you later, alligator"));
