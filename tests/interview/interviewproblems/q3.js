@@ -2,7 +2,7 @@
 //Write a PANIC! function. The function should 
 //take in a sentece and return a sentence with all
 //capital letters and exclamation mark(!) at the end.
-//Use JS bult in string methods.
+//Use JS buшlt in string methods.
 
 //If the string is a phrase or a sentece, add 
 //an emoji between each word.
@@ -15,6 +15,10 @@
 
 //CLUE 
 // .split() .join();
+
+function panic(str) {
+  return str.toUpperCase().split(" ").join(" emoji ");
+}
 
 function panic(str){
     return str

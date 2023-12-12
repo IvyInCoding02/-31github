@@ -10,13 +10,14 @@
 
 // Clue: endsWith and slice
 
-function whisper(str) {
+function whisper(str){
     if(str.endsWith("!")){
-        return "shh..."+ str.slice(0, -1).toLowerCase();
+        return "shh..." + str.toLowerCase().slice(0, -1);
     }
-        return "shh..." + str.toLowerCase();
-
+    return "shh..." + str.toLowerCase(); 
 }
+
+
 
 console.log(whisper("PLEASE STOP SHOUTING"));
 console.log(whisper("MA'AM this is Wendy's!"))
