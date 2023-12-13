@@ -21,6 +21,22 @@ function toTitleCase(str){
    // join a sentence array into a string
    return capArr. join(" ");
 }
+
+
+//REPEATED SOLVING PROBLEMS
+// function capLetter(word){
+//     return word[0].toUpperCase() + word.slice(1);
+// }
+
+// function toTitleCase(str){
+//     //I have to create an array for each word individually
+//     const sentenceArr = str.split(" ");
+//     //I have to loop through each word in the array and apply capLetter function to each word
+//     const capArr = sentenceArr.map(word => capLetter(word))
+//     return capArr.join(" ");
+// }
+
+
 console.log(capitalizeWord("pumpkin"));
 console.log(toTitleCase("Pumpkin pranced purposefully across the pond."))
 
