@@ -34,20 +34,52 @@ const eggScrambleRecipe = [
 //     // and lastly do not forget to return the new array
 // }
 
-function removeDupesFromArray(arr){
-//create a new array with unique items 
-let uniqueItems = [];
-//loop through each item in the arr
-arr.forEach(item => {
-//check if the uniqueItems arr includes the item and add if it does not
-if(!uniqueItems.includes(item)){
-    uniqueItems.push(item)
-}
-//if it does, do not do anything
-})
+//SOLUTION TYPE 1 - THIS METHOD WORKS FOR  SMALL DATA BUT CAN SLOW DOWN 
+//THE WORK IF WE WILL HAVE GIGANTIC DATA WITH OVER 1000 ITEMS  BECAUSE OF THE 
+//INCLUDES METHOD THAT WILL HAVE TO GO THROUGH EACH ITEM AND CHECK IF THE ARRAY 
+//INCLUDES THE ITEM OR NOT. THE METHOD USES NESTED ARRAY.
 
-//return the new array 
-return uniqueItems;
-}
+// function removeDupesFromArray(arr){
+// //create a new array with unique items 
+// let uniqueItems = [];
+// //loop through each item in the arr
+// arr.forEach(item => {
+// //check if the uniqueItems arr includes the item and add if it does not
+// if(!uniqueItems.includes(item)){
+//     uniqueItems.push(item)
+// }
+// //if it does, do not do anything
+// })
+
+// //return the new array 
+// return uniqueItems;
+// }
+
+// SOLUTION TYPE 2 - THIS METHOD IS MORE EFFECTIVE TO USE BECAUSE IT WILL NOT LOOP 
+//THROUGH EACH NESTED ARRAY BUT WILL USE LOOK UP TABLE TO CHECK IF THE ITEM IS THERE OR NOT
+// AND IF IT IS NOT THERE, IT WILL ADD THE ITEM INTO THE NEW CREATED OBJ
+
+function removeDupesFromArray(arr){
+//     //create a new object to keep track of duplicates
+//     //use filter to loop through each item in the array 
+//     //for each item in arr
+//     // look up each item in the look up table
+//     //if the item does NOT exist in the look up table add it and return true
+//     //return true 
+
+let trackDupes = {};
+return arr.filter(item => {
+    if(!trackDupes[item]){
+        trackDupes[item] = true;
+        return true;
+    }
+    return false;
+})
+ }
+
+//SOLUTION TYPE 3: 
+// function removeDupesFromArray(){
+
+// }
 
 console.log(removeDupesFromArray(eggScrambleRecipe));
