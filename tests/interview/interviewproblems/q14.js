@@ -59,27 +59,28 @@ const eggScrambleRecipe = [
 //THROUGH EACH NESTED ARRAY BUT WILL USE LOOK UP TABLE TO CHECK IF THE ITEM IS THERE OR NOT
 // AND IF IT IS NOT THERE, IT WILL ADD THE ITEM INTO THE NEW CREATED OBJ
 
+// function removeDupesFromArray(arr){
+// //     //create a new object to keep track of duplicates
+// //     //use filter to loop through each item in the array 
+// //     //for each item in arr
+// //     // look up each item in the look up table
+// //     //if the item does NOT exist in the look up table add it and return true
+// //     //return true 
+
+// // let trackDupes = {};
+// // return arr.filter(item => {
+// //     if(!trackDupes[item]){
+// //         trackDupes[item] = true;
+// //         return true;
+// //     }
+// //     return false;
+// // })
+//  }
+
+// SOLUTION TYPE 3 - THIS IS ANOTHER BUILD IN METHOD SET() THAT CAN REMOVE 
+//DUPLICATE ITEMS AND RETURN [...new] NEW ARRAY WITH UPDATED ITEMS
 function removeDupesFromArray(arr){
-//     //create a new object to keep track of duplicates
-//     //use filter to loop through each item in the array 
-//     //for each item in arr
-//     // look up each item in the look up table
-//     //if the item does NOT exist in the look up table add it and return true
-//     //return true 
-
-let trackDupes = {};
-return arr.filter(item => {
-    if(!trackDupes[item]){
-        trackDupes[item] = true;
-        return true;
-    }
-    return false;
-})
- }
-
-//SOLUTION TYPE 3: 
-// function removeDupesFromArray(){
-
-// }
+    return [...new Set(arr)]
+}
 
 console.log(removeDupesFromArray(eggScrambleRecipe));
