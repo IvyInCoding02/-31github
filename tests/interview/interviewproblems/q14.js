@@ -55,6 +55,18 @@ const eggScrambleRecipe = [
 // return uniqueItems;
 // }
 
+
+//REPEAT SOLVING THE PROBLEM ON MY OWN DAY 2
+// function removeDupesFromArray(arr){
+//  let uniqueItems = [];
+//  arr.forEach(item => {
+//     if(!uniqueItems.includes(item)){
+//         uniqueItems.push(item)
+//     }
+//  })
+//  return uniqueItems;
+// }
+
 // SOLUTION TYPE 2 - THIS METHOD IS MORE EFFECTIVE TO USE BECAUSE IT WILL NOT LOOP 
 //THROUGH EACH NESTED ARRAY BUT WILL USE LOOK UP TABLE TO CHECK IF THE ITEM IS THERE OR NOT
 // AND IF IT IS NOT THERE, IT WILL ADD THE ITEM INTO THE NEW CREATED OBJ
@@ -77,10 +89,29 @@ const eggScrambleRecipe = [
 // // })
 //  }
 
+
+//REPEAT SOLVING THE PROBLEM ON MY OWN DAY 2
+// function removeDupesFromArray(arr){
+//     let dupsRemoved = {};
+//     return arr.filter(item => {
+//         if(!dupsRemoved[item]){
+//             dupsRemoved[item] = true;
+//             return true;
+//         }
+//         return false;
+//     })
+// }
+
 // SOLUTION TYPE 3 - THIS IS ANOTHER BUILD IN METHOD SET() THAT CAN REMOVE 
 //DUPLICATE ITEMS AND RETURN [...new] NEW ARRAY WITH UPDATED ITEMS
 function removeDupesFromArray(arr){
     return [...new Set(arr)]
 }
+
+
+//REPEAT SOLVING THE PROBLEM ON MY OWN DAY 2
+// function removeDupsFromArray(arr){
+//     return [...new Set(arr)]
+// }
 
 console.log(removeDupesFromArray(eggScrambleRecipe));
