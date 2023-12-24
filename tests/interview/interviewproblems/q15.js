@@ -37,6 +37,8 @@ function flatten(arr){
 // if the item is an array, loop through it, pushing each item into newArr
 // return newArr;
 
+
+//Manual method of solving the problem
 const newArr = [];
 arr.forEach(element => {
     if(Array.isArray(element)){
